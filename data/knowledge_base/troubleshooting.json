@@ -1,0 +1,44 @@
+{
+  "entries": [
+    {
+      "id": "troubleshoot_001",
+      "title": "Can't Log In to My Account",
+      "problem": "I keep getting 'invalid credentials' error when trying to log in",
+      "solution": "First, make sure you're entering your email and password correctly. Passwords are case-sensitive. If you still can't log in, click 'Forgot Password' on the login page. You'll receive a password reset email within 5 minutes. If you don't receive it, check your spam folder. If you still have issues, contact support@example.com with your account email.",
+      "category": "Troubleshooting",
+      "tags": ["login", "credentials", "password", "forgot password", "access denied"]
+    },
+    {
+      "id": "troubleshoot_002",
+      "title": "Page Loading Slowly or Timing Out",
+      "problem": "Website is slow or pages timeout frequently",
+      "solution": "Slow performance can be caused by: 1) Browser issues - clear your cache and cookies, try incognito mode. 2) Internet connection - run a speed test at speedtest.net. 3) Browser extensions - disable them temporarily. 4) Old browser - update to the latest version. If problems persist, it may be our server. Check our status page at status.example.com. Email support@example.com if the issue continues.",
+      "category": "Troubleshooting",
+      "tags": ["slow", "timeout", "performance", "loading", "lag", "browser"]
+    },
+    {
+      "id": "troubleshoot_003",
+      "title": "Payment Processing Failed",
+      "problem": "My credit card payment was declined",
+      "solution": "Payment declines can happen for several reasons: 1) Insufficient funds. 2) Incorrect card details. 3) Expired card. 4) Card locked for security. 5) Our payment processor rejected it. Try these steps: Update your payment method, use a different card, contact your bank to check for blocks, or email billing@example.com with details. We accept Visa, Mastercard, Amex, Discover, and PayPal.",
+      "category": "Troubleshooting",
+      "tags": ["payment", "billing", "card declined", "transaction failed", "payment method"]
+    },
+    {
+      "id": "troubleshoot_004",
+      "title": "Missing or Corrupted Files",
+      "problem": "Some of my files are missing or showing as corrupted",
+      "solution": "Files can be missing if: 1) They were accidentally deleted - check Trash/Recently Deleted for 30 days. 2) Folder permissions changed - check your folder settings. 3) Syncing issues - try logging out and back in. 4) Browser cache - clear your browser cache. If files are corrupted, try downloading them again or using a different format. Contact support@example.com if you need file recovery assistance.",
+      "category": "Troubleshooting",
+      "tags": ["files", "missing", "corrupted", "deleted", "recovery", "sync"]
+    },
+    {
+      "id": "troubleshoot_005",
+      "title": "Email Notifications Not Received",
+      "problem": "I'm not getting email notifications from the platform",
+      "solution": "Check these steps: 1) Check Notification Settings > Email to ensure they're enabled. 2) Check your spam/junk folder for our emails. 3) Add notifications@example.com to your contacts to prevent filtering. 4) Verify your email address is correct in account settings. 5) Try disabling email filters or rules in your email client. If still not working, contact support@example.com with the email address registered to your account.",
+      "category": "Troubleshooting",
+      "tags": ["notifications", "email", "not received", "spam", "missing emails"]
+    }
+  ]
+}

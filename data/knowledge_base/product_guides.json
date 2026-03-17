@@ -1,0 +1,39 @@
+{
+  "entries": [
+    {
+      "id": "guide_001",
+      "title": "Getting Started with Your Account",
+      "content": "Welcome to our platform! To get started, create an account by visiting our website and clicking 'Sign Up'. Enter your email and create a strong password. You'll receive a verification email within minutes. Click the verification link to activate your account. Once verified, you can log in and access all features. If you don't receive the verification email, check your spam folder or request a new one.",
+      "category": "Getting Started",
+      "tags": ["account", "signup", "verification", "getting started", "welcome"]
+    },
+    {
+      "id": "guide_002",
+      "title": "How to Upgrade Your Plan",
+      "content": "Ready to unlock more features? Visit your account settings and click 'Upgrade Plan'. We offer three tiers: Starter ($9/month), Professional ($29/month), and Enterprise (custom pricing). Each tier includes different features and usage limits. You can upgrade or downgrade at any time. Upgrades take effect immediately, while downgrades apply at the end of your billing cycle. Contact our sales team at sales@example.com for Enterprise pricing.",
+      "category": "Billing",
+      "tags": ["upgrade", "plans", "pricing", "billing", "features", "tier"]
+    },
+    {
+      "id": "guide_003",
+      "title": "Two-Factor Authentication Setup",
+      "content": "Secure your account with two-factor authentication (2FA). Go to Settings > Security and enable 2FA. You can choose SMS, authenticator app, or backup codes. Download an authenticator app like Google Authenticator or Authy. Scan the QR code with your app and save the backup codes somewhere safe. You'll need a code each time you log in from a new device.",
+      "category": "Security",
+      "tags": ["security", "2fa", "authentication", "mfa", "protect account"]
+    },
+    {
+      "id": "guide_004",
+      "title": "Integrating Third-Party Apps",
+      "content": "Connect your favorite tools to our platform. Go to Settings > Integrations to browse available apps. Popular integrations include Slack, Zapier, Google Workspace, Microsoft Teams, and Salesforce. Click 'Connect' to authorize the app with your account. Most integrations are reversible - just click 'Disconnect' to remove them. For API access, generate API keys in Settings > API Keys.",
+      "category": "Integrations",
+      "tags": ["integrations", "third-party", "api", "zapier", "slack", "salesforce"]
+    },
+    {
+      "id": "guide_005",
+      "title": "Exporting and Backing Up Your Data",
+      "content": "You own your data. Export it anytime from Settings > Data Export. Choose format: CSV, JSON, or PDF. Select the date range and data types (emails, files, analytics). The export file will be generated and emailed to you within 24 hours for large datasets. You can also set up automated daily or weekly backups. All backups are encrypted and stored securely.",
+      "category": "Data Management",
+      "tags": ["export", "backup", "data", "download", "csv", "json"]
+    }
+  ]
+}

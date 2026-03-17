@@ -1,0 +1,34 @@
+{
+  "entries": [
+    {
+      "id": "faq_001",
+      "question": "How do I reset my password?",
+      "answer": "Visit our login page and click 'Forgot Password'. Enter your email address and we'll send you a reset link within 5 minutes. Click the link in the email and follow the instructions to create a new password. If you don't receive the email, check your spam folder.",
+      "tags": ["password", "account", "login", "reset", "authentication"]
+    },
+    {
+      "id": "faq_002",
+      "question": "What is your refund policy?",
+      "answer": "We offer a full refund within 30 days of purchase. After 30 days, store credit is available instead. To initiate a refund, contact support@example.com with your order number. Refunds are typically processed within 5-7 business days.",
+      "tags": ["refund", "return", "money back", "policy", "billing"]
+    },
+    {
+      "id": "faq_003",
+      "question": "How do I cancel my subscription?",
+      "answer": "Log into your account, navigate to Settings > Subscription, and click 'Cancel Subscription'. You'll retain access until the end of your current billing period. Cancellations are effective immediately after the current period ends.",
+      "tags": ["cancel", "subscription", "billing", "unsubscribe", "account"]
+    },
+    {
+      "id": "faq_004",
+      "question": "How do I contact support?",
+      "answer": "You can reach our support team at support@example.com or call 1-800-SUPPORT Monday to Friday 9am-5pm EST. For urgent issues, please call our priority support line during business hours. Average response time for emails is 24 hours.",
+      "tags": ["contact", "support", "help", "phone", "email", "reach out"]
+    },
+    {
+      "id": "faq_005",
+      "question": "Where can I track my order?",
+      "answer": "Once your order ships, you'll receive a tracking email with a unique tracking number. You can also visit 'My Orders' in your account dashboard to track all orders. Shipping typically takes 5-7 business days within the US.",
+      "tags": ["order", "track", "shipping", "delivery", "status", "package"]
+    }
+  ]
+}
