@@ -26,6 +26,7 @@ venv/
 ENV/
 env/
 .venv
+.env
 
 # IDEs
 .vscode/
@@ -60,3 +61,4 @@ logs/
 # Knowledge base (if using local files)
 data/knowledge_base/*.pdf
 data/knowledge_base/*.txt
+.env
