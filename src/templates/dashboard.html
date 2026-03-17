@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support Email Agent</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📧 Customer Support Email Agent</h1>
+            <p class="subtitle">Test the LandGraph workflow with mock emails</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Sidebar: Submit Email Form -->
+            <aside class="sidebar">
+                <div class="card form-card">
+                    <h2>Send Test Email</h2>
+                    <form id="email-form" class="form">
+                        <div class="form-group">
+                            <label for="sender">Sender Email:</label>
+                            <input
+                                type="email"
+                                id="sender"
+                                name="sender"
+                                value="customer@example.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">-- Select a test scenario --</option>
+                                <option value="I forgot my password">🔐 Password Reset</option>
+                                <option value="I want a refund for my order">💰 Refund Request</option>
+                                <option value="How do I cancel my subscription?">❌ Cancellation</option>
+                                <option value="My payment failed">⚠️ Payment Issue</option>
+                                <option value="How do I set up two-factor authentication?">🔒 2FA Setup</option>
+                                <option value="I can't log in to my account">🚫 Login Issue</option>
+                                <option value="How do I upgrade my plan?">⬆️ Upgrade Plan</option>
+                                <option value="Export my data">📥 Data Export</option>
+                                <option value="Slack integration help">🔗 Integration Support</option>
+                                <option value="The app is running very slowly">⏱️ Performance Issue</option>
+                                <option value="How do I create an account?">👤 Account Creation</option>
+                                <option value="Custom question">✍️ Custom Question</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="custom-subject-group" style="display: none;">
+                            <label for="custom-subject">Custom Subject:</label>
+                            <input
+                                type="text"
+                                id="custom-subject"
+                                name="custom-subject"
+                                placeholder="Enter your custom subject"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="body">Message Body:</label>
+                            <textarea
+                                id="body"
+                                name="body"
+                                rows="6"
+                                placeholder="Enter the email body..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Email</button>
+                    </form>
+
+                    <div id="form-message" class="form-message" style="display: none;"></div>
+                </div>
+            </aside>
+
+            <!-- Right Content: Email List & Details -->
+            <main class="content">
+                <!-- Email List -->
+                <div class="card inbox-card">
+                    <div class="card-header">
+                        <h2>📬 Inbox</h2>
+                        <button id="refresh-btn" class="btn btn-small">🔄 Refresh</button>
+                    </div>
+
+                    <div id="email-list" class="email-list">
+                        <div class="loading">Loading emails...</div>
+                    </div>
+                </div>
+
+                <!-- Email Details -->
+                <div id="detail-section" class="card detail-card" style="display: none;">
+                    <div class="card-header">
+                        <h2 id="detail-subject"></h2>
+                        <button id="close-detail-btn" class="btn btn-small">✕ Close</button>
+                    </div>
+
+                    <div id="email-detail" class="email-detail">
+                        <!-- Email metadata -->
+                        <div class="detail-row">
+                            <span class="label">From:</span>
+                            <span id="detail-from"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Status:</span>
+                            <span id="detail-status" class="status-badge"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Received:</span>
+                            <span id="detail-received"></span>
+                        </div>
+
+                        <!-- Original email body -->
+                        <div class="section">
+                            <h3>Original Message</h3>
+                            <div id="detail-body" class="message-body"></div>
+                        </div>
+
+                        <!-- Classification -->
+                        <div class="section">
+                            <h3>📊 Classification</h3>
+                            <div id="classification-info">
+                                <div class="detail-row">
+                                    <span class="label">Intent:</span>
+                                    <span id="detail-intent">-</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="label">Category:</span>
+                                    <span id="detail-category">-</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="label">Priority:</span>
+                                    <span id="detail-priority" class="priority-badge">-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- KB Search Results -->
+                        <div class="section">
+                            <h3>🔍 Knowledge Base Results</h3>
+                            <div id="kb-results">
+                                <p class="loading-text">No KB results available</p>
+                            </div>
+                        </div>
+
+                        <!-- Draft Response -->
+                        <div class="section">
+                            <h3>✍️ Draft Response</h3>
+                            <div id="detail-draft" class="response-text">No draft available</div>
+                        </div>
+
+                        <!-- Final Response -->
+                        <div class="section" id="final-response-section" style="display: none;">
+                            <h3>📤 Final Response (Sent)</h3>
+                            <div id="detail-final" class="response-text"></div>
+                        </div>
+
+                        <!-- Follow-up Info -->
+                        <div class="section" id="followup-section" style="display: none;">
+                            <h3>⏰ Follow-up Scheduled</h3>
+                            <div id="detail-followup"></div>
+                        </div>
+
+                        <!-- Review Status -->
+                        <div class="section" id="review-section" style="display: none;">
+                            <h3>👤 Human Review</h3>
+                            <div id="review-info"></div>
+                            <div class="button-group">
+                                <button id="approve-btn" class="btn btn-success">✓ Approve & Send</button>
+                                <button id="reject-btn" class="btn btn-danger">✕ Reject</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -86,3 +86,8 @@ class EmailRecord(BaseModel):
 
     created_at: datetime
     updated_at: datetime
+    received_at: Optional[datetime] = None
+
+    class Config:
+        """Pydantic config."""
+        populate_by_name = True

@@ -34,6 +34,7 @@ class EmailService:
             status="pending",
             created_at=now,
             updated_at=now,
+            received_at=now,
         )
         self._store[email_id] = record
         return email_id, record
